@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="_RoboStyles.css" rel="stylesheet" />
+</head>
+<body>
+    <section class="container">
+
+        <section class="ListRobots" id="ListRobots">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Robot Name</th>
+                        <th>Robot Metal</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="list">
+
+                </tbody>
+            </table>
+        </section>
+
+        <section class="CreateRobot hidden" id="CreateRobot">
+            
+            <input type="text" placeholder="robotName" id="robotName"/>
+            <input type="text" placeholder="robotMetal" id="robotMetal" />
+            <input type="text" placeholder="robotPicture" id="robotPicture"/>
+
+            <button type="button" class="btn btn-primary" onclick="robotApp.Robot.addRobot()">Add Robot</button>
+            <button type="button" class="btn btn-default" id="updateRobot">Update Robot</button>
+        </section>
+
+    </section>
+    
+    <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li><a onclick="robotApp.DOM.goHome()">Home</a></li>
+                <li><a onclick="robotApp.DOM.goNew()">New Robot</a></li>
+            </ul>
+        </div>
+    </nav>
+    <script src="Scripts/jquery-1.9.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="_RoboticJS.js"></script>
+</body>
+</html>
